@@ -1,6 +1,5 @@
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
-import { serviceNavigation } from "@/content/navigation";
+import { footerServiceNavigation } from "@/content/navigation";
 import { Brand } from "@/components/ui/brand";
 
 export function SiteFooter() {
@@ -10,41 +9,46 @@ export function SiteFooter() {
         <div className="footer-brand">
           <Brand />
           <p className="footer-brand-copy">
-            Tecnología para ordenar operaciones y construir nuevas capacidades
-            digitales.
+            Soluciones tecnológicas para operaciones empresariales que buscan
+            claridad, control y nuevas capacidades.
           </p>
         </div>
         <div className="footer-column">
-          <h2>Explora</h2>
-          <nav aria-label="Servicios" className="footer-links">
-            {serviceNavigation.map((item) => (
-              <Link href={item.href} key={item.href}>
+          <h2>Producto</h2>
+          <nav aria-label="Producto principal" className="footer-links">
+            <Link href="/wms">NODUM WMS</Link>
+            <Link href="/soluciones">Productos empresariales</Link>
+          </nav>
+        </div>
+        <div className="footer-column">
+          <h2>Servicios</h2>
+          <nav aria-label="Servicios tecnológicos" className="footer-links">
+            {footerServiceNavigation.map((item) => (
+              <Link href={item.href} key={item.label}>
                 {item.label}
               </Link>
             ))}
           </nav>
         </div>
         <div className="footer-column">
-          <h2>NODUM</h2>
-          <nav aria-label="Empresa" className="footer-links">
-            <Link href="/soluciones">Soluciones</Link>
+          <h2>Empresa</h2>
+          <nav aria-label="Información corporativa" className="footer-links">
             <Link href="/nosotros">Nosotros</Link>
+            <Link href="/soluciones">Soluciones</Link>
             <Link href="/contacto">Contacto</Link>
           </nav>
         </div>
         <div className="footer-column footer-contact">
           <h2>Hablemos</h2>
-          <nav aria-label="Contacto" className="footer-links">
-            <Link href="/diagnostico">
-              Solicitar diagnóstico
-              <ArrowUpRight aria-hidden="true" size={13} />
-            </Link>
-          </nav>
+          <p>Revisemos el proceso que quieres mejorar.</p>
+          <Link className="footer-diagnostic" href="/diagnostico">
+            Solicitar diagnóstico <span aria-hidden="true">↗</span>
+          </Link>
         </div>
       </div>
       <div className="container footer-bottom">
         <span>© NODUM</span>
-        <span>Tecnología con propósito operativo.</span>
+        <span>Ingeniería para operaciones reales.</span>
       </div>
     </footer>
   );

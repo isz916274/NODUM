@@ -1,7 +1,19 @@
 import type { Metadata } from "next";
+import { Geist, Geist_Mono } from "next/font/google";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
 import "./globals.css";
+import "@/styles/homepage.css";
+
+const geist = Geist({
+  subsets: ["latin"],
+  variable: "--font-geist-sans",
+});
+
+const geistMono = Geist_Mono({
+  subsets: ["latin"],
+  variable: "--font-geist-mono",
+});
 
 export const metadata: Metadata = {
   title: {
@@ -23,7 +35,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="es-MX">
+    <html className={`${geist.variable} ${geistMono.variable}`} lang="es-MX">
       <body>
         <a className="skip-link" href="#contenido">
           Saltar al contenido

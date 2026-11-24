@@ -46,6 +46,9 @@ El servicio receptor debe aceptar un `POST` con `Content-Type: application/json`
 ## Estructura
 
 - `src/app/` — rutas, layout, metadatos y endpoint de formularios
-- `src/components/` — navegación, elementos de interfaz y secciones reutilizables
-- `src/content/` — navegación y contenido tipado
-- `src/app/globals.css` — tokens visuales, estilos y breakpoints
+- `src/components/` — navegación, elementos de interfaz y secciones reutilizables de la homepage
+- `src/content/` — navegación, contenido de servicios y datos de la homepage
+- `src/app/globals.css` — reset y tokens visuales compartidos
+- `src/styles/homepage.css` — identidad visual y estilos responsive de la homepage
+
+La interfaz del WMS en la homepage es una demostración visual con datos de ejemplo; no se conecta a un backend ni representa inventario real.

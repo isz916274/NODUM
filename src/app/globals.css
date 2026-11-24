@@ -10,17 +10,19 @@
 
 :root {
   color-scheme: dark;
-  --ink: #101311;
-  --ink-raised: #171b18;
-  --ink-soft: #1d221e;
-  --paper: #f0f0e9;
-  --muted: #a4aaa2;
-  --muted-dark: #707870;
-  --accent: #c9f36b;
-  --accent-strong: #d7ff7c;
-  --line: rgb(240 240 233 / 12%);
-  --line-strong: rgb(240 240 233 / 21%);
-  --font-interface: "Arial", "Helvetica Neue", sans-serif;
+  --ink: #101318;
+  --ink-raised: #1b222b;
+  --ink-soft: #232c36;
+  --paper: #f4f6f8;
+  --muted: #929ba8;
+  --muted-dark: #687381;
+  --accent: #a3e635;
+  --accent-strong: #b6f05d;
+  --turquoise: #36bfa0;
+  --line: rgb(244 246 248 / 12%);
+  --line-strong: rgb(244 246 248 / 21%);
+  --font-interface: var(--font-geist-sans), "Segoe UI", sans-serif;
+  --font-mono: var(--font-geist-mono), Consolas, monospace;
   --content-width: 1240px;
 }
 
